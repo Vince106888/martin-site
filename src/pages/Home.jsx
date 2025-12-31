@@ -19,7 +19,7 @@ function ImageRotator({ images, interval = 5000 }) {
         <div
           key={idx}
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            idx === current ? "opacity-30" : "opacity-0"
+            idx === current ? "opacity-100" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${src})` }}
         />
@@ -33,15 +33,16 @@ function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with rotating images */}
-      <ImageRotator
-        images={[
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
-          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
-          "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80",
-        ]}
-      />
+        <ImageRotator
+          images={[
+            "/images/martin-wafula.png",
+            "/images/sample2.jpeg",
+            "/images/sample3.jpg",
+            "/images/sample4.jpg",
+          ]}
+        />
 
-      {/* Gradient overlay */}
+        {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-blue-950/90 to-purple-950/95"></div>
 
       {/* Animated particles */}

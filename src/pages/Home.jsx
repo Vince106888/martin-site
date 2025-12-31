@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, FileText, ChevronDown, BookOpen, Award, GraduationCap, Users, ExternalLink, Github, Linkedin, Twitter, MapPin } from "lucide-react";
+import { Mail, FileText, ChevronDown, BookOpen, Award, GraduationCap, Users, ExternalLink, Github, Linkedin, Twitter, MapPin, Briefcase } from "lucide-react";
 
 // Image Rotator Component
 function ImageRotator({ images, interval = 5000 }) {
@@ -92,13 +92,19 @@ function Hero() {
             className="space-y-4"
           >
             <p className="text-2xl md:text-3xl text-gray-200 font-light">
-              DPhil Candidate in Engineering Science
+              Lecturer • Researcher • Mentor
             </p>
-            <div className="flex items-center justify-center gap-3 text-blue-300">
-              <GraduationCap className="w-5 h-5" />
-              <span className="text-lg">University of Oxford</span>
-              <span className="text-gray-500">•</span>
-              <span className="text-lg">Rhodes Scholar</span>
+            <div className="flex flex-col items-center justify-center gap-3 text-blue-300">
+              <div className="flex items-center gap-2">
+                <Briefcase className="w-5 h-5" />
+                <span className="text-lg">Strathmore University & Multimedia University of Kenya</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <GraduationCap className="w-5 h-5" />
+                <span className="text-lg">DPhil, University of Oxford</span>
+                <span className="text-gray-500">•</span>
+                <span className="text-lg">Rhodes Scholar 2019</span>
+              </div>
             </div>
           </motion.div>
 
@@ -108,8 +114,8 @@ function Hero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Pioneering research in <span className="text-blue-300 font-semibold">graph compression</span> and <span className="text-purple-300 font-semibold">spatial networks</span>. 
-            Bridging information theory with next-generation wireless systems to solve complex real-world challenges.
+            Bringing world-class research in <span className="text-blue-300 font-semibold">graph compression</span> and <span className="text-purple-300 font-semibold">wireless networks</span> from Oxford back to Kenya. 
+            Educating the next generation of African engineers while advancing cutting-edge telecommunications research.
           </motion.p>
 
           <motion.div
@@ -126,11 +132,11 @@ function Hero() {
               Get in Touch
             </a>
             <a
-              href="publications"
+              href="#research"
               className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all flex items-center gap-2 hover:scale-105"
             >
               <FileText className="w-5 h-5" />
-              View Publications
+              View Research
             </a>
           </motion.div>
         </motion.div>
@@ -175,18 +181,19 @@ function About() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a <span className="font-semibold text-blue-600">DPhil candidate at the University of Oxford</span>, 
-              conducting cutting-edge research in Engineering Science under the guidance of Prof. Justin P. Coon. 
-              My work focuses on developing information-theoretic frameworks for efficient graph processing and wireless network optimization.
+              I'm currently a <span className="font-semibold text-blue-600">Teaching Fellow at Strathmore University</span> and 
+              lecturer at <span className="font-semibold text-purple-600">Multimedia University of Kenya</span>, having recently 
+              completed my DPhil in Engineering Science at the University of Oxford under Prof. Justin P. Coon's supervision.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              As a <span className="font-semibold text-purple-600">Rhodes Scholar</span>, I'm passionate about making 
-              complex engineering concepts accessible through teaching and mentorship. I currently serve as a Teaching 
-              Fellow at Strathmore University and have over 5 years of laboratory demonstration experience at Oxford.
+              My research focused on developing information-theoretic frameworks for efficient graph processing, lossy compression 
+              of spatial networks, and optimization of next-generation wireless systems. I'm now bringing that expertise back to 
+              Kenya to inspire and educate the next generation of African engineers.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Beyond research, I'm committed to <span className="font-semibold">community service and expanding opportunities</span> for 
-              students across East Africa through scholarship guidance and STEM outreach initiatives.
+              As a <span className="font-semibold text-purple-600">Rhodes Scholar (Kenya & Oriel, 2019)</span>, I'm passionate 
+              about expanding opportunities for students across East Africa through mentorship, Rhodes Scholarship guidance, and 
+              STEM outreach initiatives. I continue to serve as Scholar Programs Facilitator at Rhodes House.
             </p>
           </motion.div>
 
@@ -197,13 +204,13 @@ function About() {
             transition={{ duration: 0.8 }}
             className="bg-white rounded-3xl shadow-2xl p-8 space-y-6"
           >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Quick Facts</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Current Roles</h3>
             <div className="space-y-4">
               {[
-                { icon: GraduationCap, label: "Institution", value: "University of Oxford" },
-                { icon: Award, label: "Scholarship", value: "Rhodes Scholar 2019" },
-                { icon: MapPin, label: "Based in", value: "Oxford, UK / Nairobi, Kenya" },
-                { icon: Users, label: "Role", value: "Scholar Programs Facilitator" },
+                { icon: Briefcase, label: "Teaching Fellow", value: "Strathmore University" },
+                { icon: GraduationCap, label: "Lecturer", value: "Multimedia University of Kenya" },
+                { icon: Award, label: "Education", value: "DPhil, University of Oxford" },
+                { icon: Users, label: "Service", value: "Scholar Programs Facilitator" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
@@ -239,12 +246,12 @@ function Research() {
     },
     {
       icon: Award,
-      title: "Key Publications & Contributions",
+      title: "Publications & Impact",
       items: [
         "IEEE ISIT 2024 — Lossy Compression of Spatial Networks",
         "Asilomar 2023 — Rate-Distortion of Stochastic Block Model",
-        "Medium articles on graph compression fundamentals",
-        "Multiple conference presentations and workshops"
+        "Technical articles on graph compression and networks",
+        "Multiple conference presentations across Europe and US"
       ],
       color: "from-purple-500 to-pink-500"
     }
@@ -300,10 +307,10 @@ function Research() {
 // Stats Section
 function Stats() {
   const stats = [
-    { value: "5+", label: "Years at Oxford", sublabel: "Lab Demonstrator" },
-    { value: "2", label: "IEEE Publications", sublabel: "ISIT & Asilomar" },
+    { value: "17+", label: "Years Experience", sublabel: "Teaching & Research" },
+    { value: "2", label: "Universities", sublabel: "Currently Teaching" },
+    { value: "5+", label: "Years at Oxford", sublabel: "DPhil & Teaching" },
     { value: "Rhodes", label: "Scholar 2019", sublabel: "Kenya & Oriel" },
-    { value: "SPF", label: "Scholar Programs", sublabel: "Facilitator" },
   ];
 
   return (
@@ -360,8 +367,8 @@ function Contact() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8"></div>
           
           <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
-            Interested in collaboration, discussing research, or learning about scholarship opportunities? 
-            I'd love to hear from you.
+            Interested in collaboration, discussing research opportunities, teaching positions, or learning about 
+            Rhodes Scholarship applications? I'd love to hear from you.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

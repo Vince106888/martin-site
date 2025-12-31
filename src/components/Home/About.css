@@ -1,0 +1,205 @@
+/* About.css */
+
+/* ------------------------------
+   Section Setup
+-------------------------------- */
+#about {
+  padding: 6rem 1.5rem;
+  background-color: #f3f4f6; /* light gray */
+  color: #111827; /* dark text */
+  font-family: 'Inter', sans-serif;
+  scroll-margin-top: 4rem;
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  #about {
+    background-color: #111827; /* dark background */
+    color: #e5e7eb; /* light text */
+  }
+}
+
+/* ------------------------------
+   Section Title
+-------------------------------- */
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+#about h2::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4px;
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  #about h2 {
+    font-size: 3rem;
+  }
+}
+
+/* ------------------------------
+   Paragraphs
+-------------------------------- */
+#about p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: inherit;
+}
+
+/* ------------------------------
+   Subheadings
+-------------------------------- */
+#about h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  #about h3 {
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------------
+   Achievements Grid
+-------------------------------- */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.achievement-card {
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  color: #1f2937;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.achievement-card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .achievement-card {
+    background: linear-gradient(145deg, #1f2937, #111827);
+    color: #e5e7eb;
+  }
+}
+
+/* ------------------------------
+   Achievement Card Titles
+-------------------------------- */
+.achievement-card h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+/* ------------------------------
+   Skills / Technologies
+-------------------------------- */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.skill-badge {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to right, #dbeafe, #bfdbfe);
+  color: #1e3a8a;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .skill-badge {
+    background: linear-gradient(to right, #1e3a8a, #1e40af);
+    color: #bfdbfe;
+  }
+}
+
+/* ------------------------------
+   Personal Interests
+-------------------------------- */
+.personal-interests {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #ffffff, #f9fafb);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.personal-interests:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .personal-interests {
+    background: linear-gradient(145deg, #1f2937, #111827);
+    color: #e5e7eb;
+  }
+}
+
+/* ------------------------------
+   Utility Classes
+-------------------------------- */
+.text-center {
+  text-align: center;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-4xl {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}

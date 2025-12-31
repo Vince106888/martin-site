@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- SEO -->
+    <title>Martin Wachiye Wafula — Engineering & Communication Systems</title>
+    <meta
+      name="description"
+      content="Personal website of Martin Wachiye Wafula — Engineering Scientist, Lecturer, and Researcher in Communication and Information Systems."
+    />
+    <meta name="author" content="Martin Wachiye Wafula" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts (modern, academic, readable) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent flash on dark mode -->
+    <script>
+      (() => {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+
+  <body class="bg-background text-foreground antialiased">
+    <noscript>
+      This site requires JavaScript to function properly.
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- App -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

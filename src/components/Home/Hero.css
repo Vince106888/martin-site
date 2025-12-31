@@ -1,0 +1,174 @@
+/* Hero.css */
+
+/* ------------------------------
+   Section Setup
+-------------------------------- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ------------------------------
+   Rotating Background Images
+-------------------------------- */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Each rotating background layer */
+.hero-bg .bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;       /* ensure full coverage */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero-bg .bg-image.active {
+  opacity: 1;
+}
+
+/* Fade/Rotate animation for images */
+@keyframes fadeRotate {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  33% { opacity: 1; }
+  41% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ------------------------------
+   Gradient Overlay
+-------------------------------- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8));
+  z-index: 1;
+}
+
+/* ------------------------------
+   Particle Effects
+-------------------------------- */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* ------------------------------
+   Hero Text
+-------------------------------- */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 5.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #60a5fa; /* Tailwind blue-400 equivalent */
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #e5e7eb; /* Tailwind gray-200 */
+  max-width: 36rem;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #1e293b; /* Tailwind slate-800 */
+  color: #f3f4f6;
+}
+
+/* ------------------------------
+   Scroll Cue
+-------------------------------- */
+.scroll-cue {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 15px); }
+}

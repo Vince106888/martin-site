@@ -81,7 +81,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
           >
-            Martin Wachiye Wafula
+            Dr Martin Wachiye Wafula
           </motion.h1>
 
           <motion.div
@@ -125,7 +125,7 @@ function Hero() {
               Get in Touch
             </a>
             <a
-              href="#publications"
+              href="publications"
               className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all flex items-center gap-2 hover:scale-105"
             >
               <FileText className="w-5 h-5" />
@@ -338,7 +338,7 @@ function Stats() {
 // Contact Section
 function Contact() {
   const socialLinks = [
-    { icon: Mail, label: "Email", href: "mailto:martin.wafula@eng.ox.ac.uk", color: "from-red-500 to-pink-500" },
+    { icon: Mail, label: "Email", href: "mailto:martin.wafula@ieee.org", color: "from-red-500 to-pink-500" },
     { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/martin-wafula", color: "from-blue-600 to-blue-700" },
     { icon: Github, label: "GitHub", href: "#", color: "from-gray-700 to-gray-900" },
     { icon: Twitter, label: "Twitter", href: "https://twitter.com/martin_wachiye", color: "from-blue-400 to-blue-600" },

@@ -142,7 +142,7 @@ export default function CV() {
 
             <div className="flex flex-col gap-4">
               <motion.a
-                href="/path-to-cv.pdf"
+                href="/Martin_Wafula__CV__2025.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -152,14 +152,15 @@ export default function CV() {
                 Download PDF
               </motion.a>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all"
-              >
-                <Eye className="w-5 h-5" />
-                Preview Online
-              </motion.button>
+            <motion.button
+              onClick={() => window.open('/Martin_Wafula__CV__2025.pdf', '_blank')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all"
+            >
+              <Eye className="w-5 h-5" />
+              Preview Online
+            </motion.button>
             </div>
           </div>
         </motion.div>

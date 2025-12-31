@@ -113,7 +113,7 @@ export default function Contact() {
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Whether you're interested in collaboration, have questions about my research, 
-            or want to discuss scholarship opportunities—I'd love to hear from you
+            or want to discuss scholarship opportunities, I'd love to hear from you
           </motion.p>
 
           <motion.div

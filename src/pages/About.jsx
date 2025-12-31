@@ -5,7 +5,7 @@ export default function About() {
   const values = [
     {
       title: "Making Knowledge Accessible",
-      description: "Committed to breaking down complex ideas and democratizing access to opportunities—from Rhodes Scholarship guidance across East Africa to creating learning resources for students worldwide.",
+      description: "Committed to breaking down complex ideas and democratizing access to opportunities, from Rhodes Scholarship guidance across East Africa to creating learning resources for students worldwide.",
       icon: BookHeart,
       color: "from-blue-500 to-cyan-500"
     },
@@ -17,7 +17,7 @@ export default function About() {
     },
     {
       title: "Interdisciplinary Curiosity",
-      description: "Embraces the intersection of engineering, culture, and creativity—from graph theory to Swahili poetry, from wireless networks to choir performances.",
+      description: "Embraces the intersection of engineering, culture, and creativity, from graph theory to Swahili poetry, from wireless networks to choir performances.",
       icon: Sparkles,
       color: "from-emerald-500 to-teal-500"
     },
@@ -33,7 +33,7 @@ export default function About() {
     {
       phase: "Early Foundations",
       period: "Growing up in Kenya",
-      story: "Developed an early fascination with how things work—from radio signals to network systems. This curiosity led to pursuing telecommunications engineering, driven by a desire to contribute to Africa's technological advancement.",
+      story: "Developed an early fascination with how things work, from radio signals to network systems. This curiosity led to pursuing telecommunications engineering, driven by a desire to contribute to Africa's technological advancement.",
       icon: Compass
     },
     {
@@ -102,7 +102,7 @@ export default function About() {
               About Martin
             </h1>
             <p className="text-2xl text-gray-300 font-light">
-              Engineer • Scholar • Mentor • Community Builder
+              Engineer • Lecturer • Scholar • Mentor • Community Builder
             </p>
           </motion.div>
           

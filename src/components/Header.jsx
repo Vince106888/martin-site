@@ -26,7 +26,7 @@ export default function Header() {
           className="flex items-center text-2xl font-bold text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition"
         >
           <img src="/logo.jpg" alt="Dr Martin Wafula logo" className="w-10 h-10 mr-3 rounded-full object-cover" />
-          <span>Dr Martin Wafula</span>
+          <span>Martin Wachiye Wafula</span>
         </Link>
 
         {/* Desktop Navigation */}

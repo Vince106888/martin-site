@@ -35,7 +35,7 @@ export default function Teaching() {
       institution: "Multimedia University of Kenya",
       period: "2020 - 2022",
       type: "Lecturer",
-      description: "Taught Computer Networks (CNS 3201) covering OSI/TCP-IP models, network protocols, routing, switching, and network security. Also delivered Introduction to Communication Engineering covering signal processing, modulation techniques, and communication system fundamentals.",
+      description: "Taught Computer Networks covering OSI/TCP-IP models, network protocols, routing, switching, and network security. Also delivered Introduction to Communication Engineering covering signal processing, modulation techniques, and communication system fundamentals.",
       icon: BookOpen,
       color: "from-orange-500 to-red-500"
     },
@@ -291,7 +291,7 @@ export default function Teaching() {
               Teaching extends far beyond formal lectures. As a <strong className="text-white">Rhodes Scholar Programs Facilitator</strong>, I've advised and supported scholars from diverse backgrounds, helping shape their academic journey at Oxford.
             </p>
             <p>
-              I'm passionate about <strong className="text-white">democratizing access to opportunities</strong>—whether through Rhodes Scholarship guidance sessions across East Africa, career planning workshops at Kenyan universities, or one-on-one mentorship with students navigating their academic paths.
+              I'm passionate about <strong className="text-white">democratizing access to opportunities,</strong>whether through Rhodes Scholarship guidance sessions across East Africa, career planning workshops at Kenyan universities, or one-on-one mentorship with students navigating their academic paths.
             </p>
             <p>
               My approach integrates mentorship into teaching through Q&A sessions, project guidance, and research direction for prospective postgraduate students, always emphasizing <span className="text-blue-300">originality, excellence, and the courage to pursue ambitious goals</span>.

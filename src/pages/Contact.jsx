@@ -6,9 +6,9 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      primary: "martin.wafula@eng.ox.ac.uk",
-      secondary: "martin.wafula@ieee.org",
-      href: "mailto:martin.wafula@eng.ox.ac.uk",
+      primary: "martin.wafula@ieee.org",
+      secondary: "martin.wafula@eng.ox.ac.uk",
+      href: "mailto:martin.wafula@ieee.org",
       color: "from-blue-500 to-cyan-500",
       description: "Best for research inquiries and collaborations"
     },
@@ -16,7 +16,7 @@ export default function Contact() {
       icon: Phone,
       label: "Phone",
       primary: "+254 790 511 534",
-      secondary: "Available via WhatsApp",
+      secondary: "+447782453222",
       href: "tel:+254790511534",
       color: "from-emerald-500 to-teal-500",
       description: "For urgent matters and quick discussions"
@@ -24,10 +24,10 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "Location",
-      primary: "Oxford, United Kingdom",
-      secondary: "Nairobi, Kenya",
+      primary: "Nairobi, Kenya",
+      secondary: "Oxford, United Kingdom",
       color: "from-purple-500 to-pink-500",
-      description: "Based between Oxford and Nairobi"
+      description: "Based between Nairobi and Oxford"
     }
   ];
 
@@ -276,7 +276,7 @@ export default function Contact() {
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
               For research collaborations, speaking invitations, or scholarship inquiries, 
-              please email me directly at <a href="mailto:martin.wafula@eng.ox.ac.uk" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">martin.wafula@eng.ox.ac.uk</a>.
+              please email me directly at <a href="mailto:martin.wafula@ieee.org" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">martin.wafula@ieee.org</a>.
             </p>
             <p className="text-lg leading-relaxed">
               When reaching out, feel free to include:

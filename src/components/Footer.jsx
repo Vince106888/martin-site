@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Phone, MapPin, Twitter, Github, ExternalLink, BookOpen, GraduationCap, Award, Heart } from 'lucide-react';
+import { Mail, Linkedin, Phone, MapPin, Twitter, Github, ExternalLink, BookOpen, GraduationCap, Award, Heart, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -63,6 +63,12 @@ export default function Footer() {
       label: 'Phone',
       display: '+254 790 511 534'
     },
+    {
+      href: 'https://wa.me/447782453222',
+      icon: MessageCircle,
+      label: 'Whatsapp',
+      display: '+447782453222'
+    }
   ];
 
   return (
@@ -84,7 +90,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-white text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-              Martin Wafula
+              Martin Wachiye Wafula
             </h3>
             <p className="text-gray-400 leading-relaxed mb-6">
               DPhil Candidate in Engineering Science at the University of Oxford. 

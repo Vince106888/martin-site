@@ -1,5 +1,6 @@
 import { ExternalLink, BookOpen, FileText, Award, Sparkles, Brain, Network } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Publications() {
   const publications = [
@@ -58,6 +59,8 @@ export default function Publications() {
       color: "from-emerald-500 to-teal-500"
     }
   ];
+
+  const navigate = useNavigate();
 
   return (
     <section className="min-h-screen py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100 relative overflow-hidden">
@@ -357,6 +360,7 @@ export default function Publications() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/contact")}
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
           >
             Get in Touch

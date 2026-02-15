@@ -4,12 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Moon, Sun, Menu, X } from "lucide-react";
-import { useTheme } from "@/src/context/ThemeContext";
+import { Menu, X } from "lucide-react";
 import type { NavLink } from "@/types/site";
 
 export default function Header() {
-  const { darkMode, isReady, toggleDarkMode } = useTheme();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,8 +20,6 @@ export default function Header() {
     { href: "/cv", label: "CV" },
     { href: "/contact", label: "Contact" },
   ];
-
-  const ThemeIcon = isReady && darkMode ? Sun : Moon;
 
   const navItemClass = (href: string): string => {
     const isActive = pathname === href;
@@ -71,15 +67,6 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-
-          <button
-            type="button"
-            onClick={toggleDarkMode}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-300 bg-blue-100/90 text-blue-700 transition hover:bg-blue-200/70 dark:border-slate-700 dark:bg-slate-900 dark:text-blue-300 dark:hover:bg-slate-800"
-            aria-label="Toggle dark mode"
-          >
-            <ThemeIcon className="h-5 w-5" />
-          </button>
 
           <button
             type="button"

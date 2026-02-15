@@ -70,16 +70,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={`${inter.variable} ${jetBrainsMono.variable} bg-background text-foreground antialiased`}>
         <Script id="theme-init" strategy="beforeInteractive">
           {`(() => {
-            try {
-              const theme = localStorage.getItem('theme');
-              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const shouldUseDark = theme === 'dark' || (!theme && prefersDark);
-              document.documentElement.classList.toggle('dark', shouldUseDark);
-              document.documentElement.style.colorScheme = shouldUseDark ? 'dark' : 'light';
-            } catch {
-              document.documentElement.classList.remove('dark');
-              document.documentElement.style.colorScheme = 'light';
-            }
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+            try { localStorage.setItem('theme', 'dark'); } catch {}
           })();`}
         </Script>
         <ThemeProvider>

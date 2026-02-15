@@ -1,11 +1,10 @@
 // tailwind.config.js
-export default {
-  darkMode: "class", // enables toggling with .dark
+const config = {
+  darkMode: "class",
   theme: {
     extend: {},
   },
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
 };
+
+export default config;

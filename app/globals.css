@@ -1,0 +1,150 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), "Source Sans 3", "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-400: oklch(0.71 0.17 250);
+  --color-brand-500: oklch(0.63 0.2 250);
+  --color-brand-600: oklch(0.56 0.2 250);
+  --color-brand-700: oklch(0.48 0.19 250);
+}
+
+@layer base {
+  :root {
+    --background: #cfdfff;
+    --surface: #deebff;
+    --surface-soft: #d3e3ff;
+    --surface-elevated: #c4d9ff;
+    --foreground: #020617;
+    --muted: #0f172a;
+    --border-subtle: #9db9ea;
+  }
+
+  .dark {
+    --background: #020817;
+    --surface: #0f172a;
+    --surface-soft: #16223a;
+    --surface-elevated: #1e2d48;
+    --foreground: #e2e8f0;
+    --muted: #a3b2c7;
+    --border-subtle: #25354f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 8% 12%, rgb(59 130 246 / 0.14), transparent 38%),
+      radial-gradient(circle at 94% 0%, rgb(168 85 247 / 0.12), transparent 42%),
+      var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    transition:
+      background-color 260ms ease,
+      color 260ms ease,
+      border-color 260ms ease;
+  }
+
+  .dark body {
+    background:
+      radial-gradient(circle at 8% 12%, rgb(37 99 235 / 0.2), transparent 42%),
+      radial-gradient(circle at 92% 0%, rgb(147 51 234 / 0.18), transparent 45%),
+      var(--background);
+  }
+
+  a {
+    transition: color 200ms ease;
+  }
+
+  :root:not(.dark) .text-slate-700 {
+    color: #020617;
+  }
+
+  :root:not(.dark) .text-slate-600 {
+    color: #020617;
+  }
+
+  :root:not(.dark) .text-slate-500 {
+    color: #0f172a;
+  }
+
+  :root:not(.dark) .text-slate-800,
+  :root:not(.dark) .text-slate-900 {
+    color: #020617;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply relative overflow-hidden;
+  }
+
+  .surface-panel {
+    @apply rounded-2xl border shadow-sm backdrop-blur-sm transition-colors;
+    background-color: var(--surface);
+    border-color: var(--border-subtle);
+  }
+
+  .surface-panel-soft {
+    @apply rounded-2xl border shadow-sm backdrop-blur-sm transition-colors;
+    background-color: var(--surface-soft);
+    border-color: var(--border-subtle);
+  }
+
+  .panel {
+    @apply rounded-2xl border p-6 shadow-sm backdrop-blur-sm transition-colors;
+    background-color: var(--surface);
+    border-color: var(--border-subtle);
+  }
+
+  .panel-soft {
+    @apply rounded-2xl border p-6 shadow-sm backdrop-blur-sm transition-colors;
+    background-color: var(--surface-soft);
+    border-color: var(--border-subtle);
+  }
+
+  .kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.16em];
+    color: var(--muted);
+  }
+
+  .action-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all;
+    background-image: linear-gradient(120deg, rgb(37 99 235), rgb(147 51 234));
+  }
+
+  .action-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgb(59 130 246 / 0.25);
+  }
+
+  .action-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition-all;
+    color: var(--foreground);
+    border-color: color-mix(in oklab, var(--border-subtle) 78%, transparent);
+    background-color: color-mix(in oklab, var(--surface) 86%, transparent);
+  }
+
+  .action-secondary:hover {
+    transform: translateY(-1px);
+    background-color: color-mix(in oklab, var(--surface-elevated) 88%, transparent);
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

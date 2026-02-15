@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -59,12 +59,14 @@ function deterministicRandom(seed: number): number {
   return value - Math.floor(value);
 }
 
+const toPercent = (value: number): string => `${(value * 100).toFixed(4)}%`;
+
 const heroParticles: ParticleConfig[] = Array.from({ length: 28 }, (_, index) => ({
   id: index,
-  top: `${deterministicRandom(index * 11.31) * 100}%`,
-  left: `${deterministicRandom(index * 29.17) * 100}%`,
-  duration: 3 + deterministicRandom(index * 17.29) * 2,
-  delay: deterministicRandom(index * 21.43) * 2,
+  top: toPercent(deterministicRandom(index * 11.31)),
+  left: toPercent(deterministicRandom(index * 29.17)),
+  duration: Number((3 + deterministicRandom(index * 17.29) * 2).toFixed(3)),
+  delay: Number((deterministicRandom(index * 21.43) * 2).toFixed(3)),
 }));
 
 const researchPillars: ResearchPillar[] = [
